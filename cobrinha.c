@@ -71,9 +71,9 @@ char simbolo(int cursor) {
 
 void desenhar() {
   system("cls");
-  for (int i=0; i < TAMANHO; i++) {
-    for (int j=0; j < TAMANHO; j++) {
-        printf("%c", simbolo(cobra[i*TAMANHO + j]));
+  for (int j=0; j < TAMANHO; j++) {
+    for (int i=0; i < TAMANHO; i++) {
+        printf("%c", simbolo(cobra[j*TAMANHO + i]));
     }
     printf("\n");
   }
