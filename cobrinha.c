@@ -85,3 +85,22 @@ void scan() {
     //exemplo: getch();
     //precisa <conio.h>
 }
+
+int GREEN = 10;
+int RED = 12;
+int WHITE = 15;
+int GRAY = 7;
+
+void set_color(int color) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, GREEN);
+}
+
+void hide_cursor() {
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO cursorInfo;
+
+    GetConsoleCursorInfo(hOut, &cursorInfo);
+    cursorInfo.bVisible = FALSE;
+    SetConsoleCursorInfo(hOut, &cursorInfo);
+}
