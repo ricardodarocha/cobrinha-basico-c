@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 //int ALTURA = 10;
 //int LARGURA = 10;
