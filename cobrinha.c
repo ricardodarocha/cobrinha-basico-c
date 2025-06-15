@@ -70,7 +70,8 @@ char simbolo(int cursor) {
 }
 
 void desenhar() {
-  system("cls");
+  //system("cls");
+    limpar_tela();
   for (int j=0; j < TAMANHO; j++) {
     for (int i=0; i < TAMANHO; i++) {
         printf("%c", simbolo(cobra[j*TAMANHO + i]));
@@ -103,4 +104,11 @@ void hide_cursor() {
     GetConsoleCursorInfo(hOut, &cursorInfo);
     cursorInfo.bVisible = FALSE;
     SetConsoleCursorInfo(hOut, &cursorInfo);
+}
+
+void limpar_tela() {
+    COORD cursorPos;
+    cursorPos.X = 0;
+    cursorPos.Y = 0;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPos);
 }
