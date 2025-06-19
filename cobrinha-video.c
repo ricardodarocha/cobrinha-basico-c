@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <conio.h>
 
-// 4 x 4
-int size = 2;
-int cobra[4];
+// 9 x 9
+int size = 9;
+int cobra[81];
 int cursor_antigo;
 int cursor;
 int terminou = 0;
